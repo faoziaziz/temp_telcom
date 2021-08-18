@@ -17,10 +17,3 @@ Konfigurasi klien repo
 git config --global user.name Aziz Faozi
 git config --global user.email aziz.faozi@prasimax.net
 #+END_SRC
-
-* Download Code
-Buat direktory sementara
-
-#+BEGIN_SRC bash
-repo init -u https://source.codeaurora.org/le/le/manifest.git -b release -m LE.UM.2.4.1.r1-09900-qcs405.0.xml --repo-url=git://codeaurora.org/tools/repo.git --repo-branch=caf-stable
-#+END_SRC

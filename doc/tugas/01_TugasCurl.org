@@ -9,7 +9,56 @@
 http://nemo.prasimax.net:6212/test
 #+END_SRC
 
+** Dengan Compilasi biasa (Non Static non CrossCompile)
 
+#+BEGIN_SRC c
+
+/*
+filename : getCurl.c
+*/
+
+#include <stdio.h>
+#include <curl/curl.h>
+ 
+int main(void)
+{
+  CURL *curl;
+  CURLcode res;
+ 
+  curl = curl_easy_init();
+  if(curl) {
+    
+    curl_easy_setopt(curl, CURLOPT_URL, "http://nemo.prasimax.net:6212/test");
+    /* example.com is redirected, so we tell libcurl to follow redirection */
+    curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+ 
+    /* Perform the request, res will get the return code */
+    res = curl_easy_perform(curl);
+    /* Check for errors */
+    if(res != CURLE_OK)
+      fprintf(stderr, "curl_easy_perform() failed: %s\n",
+              curl_easy_strerror(res));
+ 
+    /* always cleanup */
+    curl_easy_cleanup(curl);
+  }
+  return 0;
+}
+
+#+END_SRC
+Compilasi
+#+BEGIN_SRC bash
+gcc -o test_get getCurl.c -lcurl
+#+END_SRC
+Run
+#+BEGIN_SRC bash
+./test_get
+#+END_SRC
+
+output
+#+BEGIN_SRC bash
+{"message":"Test Dari Sini"}
+#+END_SRC
 * Referensi
 
 1. Docs API [[http://nemo.prasimax.net:6212/docs#/default/root_test_get][API Prasimax Test]]

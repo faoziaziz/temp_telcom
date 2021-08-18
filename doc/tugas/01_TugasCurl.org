@@ -13,4 +13,4 @@ http://nemo.prasimax.net:6212/test
 * Referensi
 
 1. Docs API [[http://nemo.prasimax.net:6212/docs#/default/root_test_get][API Prasimax Test]]
-
+2. Sample Curl [[https://curl.se/libcurl/c/example.html][curl]]

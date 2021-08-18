@@ -1,0 +1,19 @@
+#+TITLE: Membuat Service pada OS
+
+* Latar Belakang
+Aplikasi yang dipasang dalam Smart Speaker tidak bisa langsung berjalan 
+saat perangkat dijalankan. 
+
+* Tujuan 
+Membuat service aplikasi, seperti pada linux kita membuat file .services
+pada direktory
+
+#+BEGIN_SRC bash
+/lib/systemd/system/halt-local.service
+#+END_SRC
+
+* Batasan Masalah
+Kita tidak bisa langsung mengedit file dalam perangkat smartspeaker. Untuk
+itu kita harus mengedit source code Operating System.
+
+

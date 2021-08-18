@@ -28,8 +28,7 @@ cd sementara
 kemudian inisiasi code
 
 #+BEGIN_SRC bash
-mkdir -p ~/.repoconfig/gnupg/
-GNUPGHOME=~/.repoconfig/gnupg/ gpg --keyserver keyserver.ubuntu.com --recv-keys 692B382C
+gpg --keyserver keyserver.ubuntu.com --recv-keys 692B382C
 #+END_SRC
 #+BEGIN_SRC bash
 

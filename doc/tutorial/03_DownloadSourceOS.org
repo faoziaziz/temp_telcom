@@ -1,0 +1,19 @@
+#+TITLE: Source Code OS
+
+* Abstrak
+Dokumen ini merupakan cara untuk mendapatkan source code OS dan menggunakannya.
+
+* Install Repo
+Install Repo
+#+BEGIN_SRC bash
+mkdir ~/bin
+PATH=~/bin:$PATH
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+#+END_SRC
+
+Konfigurasi klien repo
+#+BEGIN_SRC bash
+git config --global user.name Aziz Faozi
+git config --global user.email aziz.faozi@prasimax.net
+#+END_SRC

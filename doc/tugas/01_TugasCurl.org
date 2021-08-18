@@ -1,0 +1,12 @@
+#+TITLE: Tugas Curl
+
+
+* Akses API
+1. Buatlah sebuah code C yang menggunakan curl untuk
+   melakukan get ke link berikut 
+
+#+BEGIN_SRC bash
+http://nemo.prasimax.net:6212/test
+#+END_SRC
+
+

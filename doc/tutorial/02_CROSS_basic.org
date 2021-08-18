@@ -1,0 +1,55 @@
+#+title: Test Compile
+
+
+* Abstract
+
+Document ini digunakan untuk melakukan test program yang diinject ke 
+smartspeaker.
+
+* Download Dependenvy
+
+buat directory com untuk download compilernya
+
+#+begin_src bash
+mkdir com
+cd com
+wget https://releases.linaro.org/archive/14.02/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabihf-4.8-2014.02_linux.tar.bz2
+#+end_src
+
+extract toolchaine
+
+#+begin_src bash
+tar -xf gcc-linaro-arm-linux-gnueabihf-4.8-2014.02_linux.tar.bz2 
+#+end_src
+
+jadi structur directornya akan seperti berikut
+
+#+begin_src bash
+
+/src
+/com
+#+end_src
+
+/src untuk code. /com untuk file cross compilernya. 
+
+
+
+* Compile
+masuk ke directory /src
+#+begin_src bash
+../com/gcc-linaro-arm-linux-gnueabihf-4.8-2014.02_linux/bin/arm-linux-gnueabihf-gcc main.c -o mantanmon
+#+end_src
+
+
+* Push ke SmartSpeaker
+
+#+begin_src bash
+adb push mantapmon /data/
+#+end_src
+
+* Execute
+
+#+begin_src bash
+adb shell
+/data/mantapmon
+#+end_src

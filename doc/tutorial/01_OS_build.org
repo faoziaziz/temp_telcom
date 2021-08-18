@@ -1,0 +1,66 @@
+#+TITLE: Build OS
+
+* Requirements
+
+** Hardware
+1. Minimum
+  + Memory 8GB
+  + Processors = 1
+  + Cores per processor = 2
+  + HDD 200GB pre-allocated, 
+  + OS : Ubuntu 16.04 LTS (64bit build)
+
+  Untuk downloadnya bisa dengan mendownload di [[http://old-releases.ubuntu.com/releases/16.04.5/ubuntu-16.04.5-desktop-amd64.iso][Download 16.04.5]]
+
+** Basic Setup
+Update dahulu
+#+BEGIN_SRC bash
+sudo apt-get update
+sudo apt-get upgrade
+#+END_SRC
+
+Setup bash
+
+#+BEGIN_SRC bash
+sudo ln -sf /bin/bash /bin/sh
+
+#+END_SRC
+
+Install Android Tools
+
+#+BEGIN_SRC bash
+sudo apt-get install android-tools-adb android-tools-fastboot
+#+END_SRC
+
+Install Build Tools 
+
+#+BEGIN_SRC bash
+sudo apt-get install curl git git-core gawk chrpath build-essential texinfo libz-dev
+sudo apt-get install gcc-arm-linux-gnueabi
+sudo apt-get install gcc-multilib zlib1g:i386 libssl-dev clang llvm llvm-3.8
+#+END_SRC
+
+Java 1.7, harus menggunakan openjdk 7 karena beberapa compilasi tidak berhasil 
+ketika menggunakan versi lainnya. Biasanya harus menggunakan ppa karena 
+bawaan dari java tidak support dengan openjdk 7.
+
+#+BEGIN_SRC bash
+sudo add-apt-repository ppa:openjdk-r/ppa
+sudo apt-get update
+#+END_SRC
+
+#+BEGIN_SRC bash
+sudo apt-get install openjdk-7-jdk
+#+END_SRC
+
+#+BEGIN_SRC bash
+java -version
+#+END_SRC
+
+Jika sebelumnya menggunakan versi java lainnya maka pastikan untuk mengupdate
+lingkungan javanya.
+
+#+BEGIN_SRC bash
+update-java-alternatives --list
+sudo update-java-alternatives -s java-1.7.0-openjdk-amd64
+#+END_SRC

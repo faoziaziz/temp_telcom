@@ -19,8 +19,13 @@ git config --global user.email aziz.faozi@prasimax.net
 #+END_SRC
 
 * Download Code
-Buat direktory sementara
+Buat direktory sementara dan masuk kedalam direktori itu
 
+#+BEGIN_SRC bash
+mkdir sementara
+cd sementara
+#+END_SRC
+kemudian inisiasi code
 #+BEGIN_SRC bash
 repo init -u https://source.codeaurora.org/le/le/manifest.git -b release -m LE.UM.2.4.1.r1-09900-qcs405.0.xml --repo-url=git://codeaurora.org/tools/repo.git --repo-branch=caf-stable
 #+END_SRC

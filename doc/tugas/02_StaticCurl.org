@@ -13,7 +13,9 @@ library.
        #+end_src
        Kemudian masuk kedirektory curl lalu build.
        #+begin_src bash
-       ./configure --disable-shared --enable-debug --enable-maintainer-mode
+       autoreconf -fi
+       ./configure --disable-shared --enable-debug --enable-maintainer-mode --without-ssl
+       make
        #+end_src
 
 

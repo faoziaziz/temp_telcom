@@ -1,0 +1,21 @@
+#+TITLE: Build Static Curl
+
+* Masalah
+Saya ingin membuat sebuah aplikasi untuk get ke server tanpa bergantung pada
+library.
+
+* Solusi
+  1. Install Source Code Curl
+     Build secara static. 
+     + Download code
+       #+begin_src bash
+       git clone https://github.com/curl/curl.git
+       #+end_src
+       Kemudian masuk kedirektory curl lalu build.
+       #+begin_src bash
+       ./configure --disable-shared --enable-debug --enable-maintainer-mode
+       #+end_src
+
+
+* Referensi 
+1. [[https://github.com/curl/curl/blob/master/GIT-INFO][Build Static Curl]]

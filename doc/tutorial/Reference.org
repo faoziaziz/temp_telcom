@@ -1,0 +1,5 @@
+#+TITLE: Daftar Referensi 
+
+* Cross Compilation
+
+[[https://jensd.be/1126/linux/cross-compiling-for-arm-or-aarch64-on-debian-or-ubuntu][Build aarch]]

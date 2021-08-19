@@ -14,9 +14,19 @@ library.
        Kemudian masuk kedirektory curl lalu build.
        #+begin_src bash
        autoreconf -fi
-       ./configure --disable-shared --enable-debug --enable-maintainer-mode --without-ssl
+       ./configure --disable-shared --enable-debug --enable-maintainer-mode --without-ssl --prefix=${HOME}/lib
        make
+       make install
        #+end_src
+
+       setelah itu akan menghasilkan static library pada direktory 
+       #+BEGIN_SRC bash
+       ~/lib/lib
+       #+END_SRC
+       
+       #+BEGIN_SRC bash
+       gcc getCurl.c -L${HOME}/lib/lib -lcurl  -o my_program
+       #+END_SRC
 
 
 * Referensi 

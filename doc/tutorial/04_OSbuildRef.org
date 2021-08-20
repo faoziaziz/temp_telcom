@@ -121,11 +121,13 @@ cd ~/toolchain
      + Extract 4.0.2
        #+BEGIN_SRC bash
        cd 4.0.2
+       unzip snapdragon_sd_llvm_arm.lnx.4.0_installer_40200.108-19-21_05_04_55.zip
        cd ..
        #+END_SRC
      + Extract 4.0.11
        #+BEGIN_SRC bash
        cd 4.0.11
+       unzip snapdragon_sd_llvm_arm.lnx.4.0_installer_41100.108-19-21_05_08_09.zip
        cd ..
        #+END_SRC
 * Download Repo

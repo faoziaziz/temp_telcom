@@ -14,7 +14,7 @@ Untuk itu dokumen ini sesuai dengan update pada  06-08-2021
        #+BEGIN_SRC bash
        sudo apt-get update
        sudo apt-get upgrade
-       #+BEGIN_SRC 
+       #+END_SRC 
 
      + Set up bash
        #+BEGIN_SRC bash

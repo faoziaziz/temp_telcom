@@ -130,6 +130,31 @@ cd ~/toolchain
        unzip snapdragon_sd_llvm_arm.lnx.4.0_installer_41100.108-19-21_05_08_09.zip
        cd ..
        #+END_SRC
+  3. Buat direktory
+     #+BEGIN_SRC bash
+     sudo mkdir -p /pkg/qct/software/llvm/release/arm
+     sudo chmod 755 /pkg/qct/software/llvm/release/arm
+     #+END_SRC
+     Pindahkan semua yang sudah terekstrak ke dalam direktori diatas
+     #+BEGIN_SRC bash
+     sudo mv 3.9.2 /pkg/qct/software/llvm/release/arm/
+     sudo mv 4.0.2 /pkg/qct/software/llvm/release/arm/
+     sudo mv 4.0.11 /pkg/qct/software/llvm/release/arm/
+     #+END_SRC
+
+     Pastikan semua direktori terpindah
+     #+BEGIN_SRC bash
+     cd /pkg/qct/software/llvm/release/arm
+     ls -al
+     #+END_SRC
+
+* Install Hexagon 
+  #+BEGIN_SRC bash
+  mkdir ~/hexagon
+  cd ~/hexagon
+  wget http://nemo.prasimax.net/hexagon.lnx.8.2_installer_08202.308-19-21_05_09_40.zip
+  #+END_SRC
+  
 * Download Repo
   Download code dari repository prasimax.
   #+BEGIN_SRC bash

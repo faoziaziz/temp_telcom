@@ -87,3 +87,8 @@ Untuk itu dokumen ini sesuai dengan update pada  06-08-2021
      #+END_SRC
 
 
+* Download Repo
+  Download code dari repository prasimax.
+  #+BEGIN_SRC bash
+  git clone https://git.prasimax.net:2443/innovation-center/chipcode_root.git chipcode_root
+  #+END_SRC

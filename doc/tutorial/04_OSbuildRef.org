@@ -1,0 +1,87 @@
+#+title: BuildOS Ref
+
+* Abstract
+Qualcomm mengupdate beberapa metode untuk melakukan build. 
+Untuk itu dokumen ini sesuai dengan update pada  06-08-2021
+
+* Install Ubuntu 16.04 LTS
+  1. Download ubuntu 16.04 dari [[http://releases.ubuntu.com/xenial][Release Ubuntu]].
+     Peringatan: 
+     + Donwload yang AMD64.
+     + Download yang 16.04.x (versi 16.04.7 tidak masalah)
+  2. Install development package
+     + Update linux system 
+       #+BEGIN_SRC bash
+       sudo apt-get update
+       sudo apt-get upgrade
+       #+BEGIN_SRC 
+
+     + Set up bash
+       #+BEGIN_SRC bash
+       sudo ln -sf /bin/bash /bin/sh
+       #+END_SRC
+
+     + Install Android tools
+       #+BEGIN_SRC bash
+       sudo apt-get install android-tools-adb android-tools-fastboot
+       #+END_SRC
+     + Install Build tools
+       #+BEGIN_SRC bash
+       sudo apt-get install curl git git-core gawk chrpath build-essential texinfo libz-dev
+       sudo apt-get install gcc-arm-linux-gnueabi
+       sudo apt-get install gcc-multilib zlib1g:i386 libssl-dev clang llvm llvm-3.8
+       #+END_SRC
+
+  3. Install Java v1.8.0 JDK
+     1. Menambahkan JDK Repository
+        #+BEGIN_SRC bash
+	sudo add-apt-repository ppa:openjdk-r/ppa
+	sudo apt-get update
+	#+END_SRC
+     2. Install Java v1.8.0 JDK dan verifikasi telah terinstall
+	#+BEGIN_SRC bash
+	sudo apt-get install openjdk-8-jrek
+	java -version
+	#+END_SRC
+	Jika telah menginstall banyak java di lingkungan anda maka gunakan
+	perintah berikut.
+	#+BEGIN_SRC bash
+	update-java-alternatives --list
+	sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
+	#+END_SRC
+  4. Check status installasi LLVM 3.8
+     1. Gunakan perintah berikut untuk mengecheck adakah llvm
+	#+BEGIN_SRC bash
+	cd /usr/lib
+	ls | grep llvm
+	#+END_SRC
+     2. Verifikasi link simbol untuk  llvm-profdata
+	#+BEGIN_SRC bash
+	cd /usr/bin
+	ls -al | grep llvm-profdata
+	#+END_SRC 
+	Jika tidak ada link, buat dan verifikasi simbol link untuk llvm-profdata
+	#+BEGIN_SRC bash
+	sudo ln -s ../lib/llvm-3.8/bin/llvm-profdata
+	ls -al | grep llvm-profdata
+	#+END_SRC
+  5. Install Repo
+     #+BEGIN_SRC bash
+     mkdir ~/bin
+     PATH=~/bin:$PATH
+     curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+     chmod a+x ~/bin/repo
+     #+END_SRC
+     1. Inisiasi repo client
+	#+BEGIN_SRC bash
+	git config --global user.name AzizFaozi
+	git config --global user.email aziz.faozi@prasimax.com
+	#+END_SRC
+  6. Install Samba (optional)
+     gunakan username_dan password dari linux machine anda
+     #+BEGIN_SRC bash
+     sudo apt-get install samba
+     sudo gedit /etc/samba/smb.conf
+     sudo smbpasswd -a faoziaziz
+     sudo service smbd restart
+     #+END_SRC

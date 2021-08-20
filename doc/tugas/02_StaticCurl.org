@@ -14,7 +14,7 @@ library.
        Kemudian masuk kedirektory curl lalu build.
        #+begin_src bash
        autoreconf -fi
-       ./configure --disable-shared --enable-debug --enable-maintainer-mode --without-ssl --prefix=${HOME}/lib
+       ./configure --disable-shared --enable-debug --enable-static --enable-maintainer-mode --without-ssl --prefix=${HOME}/lib
        make
        make install
        #+end_src

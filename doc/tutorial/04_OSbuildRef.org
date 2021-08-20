@@ -32,12 +32,12 @@ Untuk itu dokumen ini sesuai dengan update pada  06-08-2021
        sudo apt-get install gcc-multilib zlib1g libssl-dev clang llvm llvm-3.8
        #+END_SRC
   3. Install Java v1.8.0 JDK
-     1. Menambahkan JDK Repository
+     + Menambahkan JDK Repository
         #+BEGIN_SRC bash
 	sudo add-apt-repository ppa:openjdk-r/ppa
 	sudo apt-get update
 	#+END_SRC
-     2. Install Java v1.8.0 JDK dan verifikasi telah terinstall
+     + Install Java v1.8.0 JDK dan verifikasi telah terinstall
 	#+BEGIN_SRC bash
 	sudo apt-get install openjdk-8-jdk
 	java -version
@@ -49,12 +49,12 @@ Untuk itu dokumen ini sesuai dengan update pada  06-08-2021
 	sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
 	#+END_SRC
   4. Check status installasi LLVM 3.8
-     1. Gunakan perintah berikut untuk mengecheck adakah llvm
-	#+BEGIN_SRC bash
-	cd /usr/lib
+     + Gunakan perintah berikut untuk mengecheck adakah llvm
+       #+BEGIN_SRC bash
+       cd /usr/lib
 	ls | grep llvm
-	#+END_SRC
-     2. Verifikasi link simbol untuk  llvm-profdata
+       #+END_SRC
+     + Verifikasi link simbol untuk  llvm-profdata
 	#+BEGIN_SRC bash
 	cd /usr/bin
 	ls -al | grep llvm-profdata
@@ -71,7 +71,7 @@ Untuk itu dokumen ini sesuai dengan update pada  06-08-2021
      curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
      chmod a+x ~/bin/repo
      #+END_SRC
-     1. Inisiasi repo client
+     + Inisiasi repo client
 	#+BEGIN_SRC bash
 	git config --global user.name AzizFaozi
 	git config --global user.email aziz.faozi@prasimax.com
@@ -84,3 +84,5 @@ Untuk itu dokumen ini sesuai dengan update pada  06-08-2021
      sudo smbpasswd -a faoziaziz
      sudo service smbd restart
      #+END_SRC
+
+

@@ -86,7 +86,48 @@ Untuk itu dokumen ini sesuai dengan update pada  06-08-2021
      sudo service smbd restart
      #+END_SRC
 
-
+* Install Toolchains
+Sebelum memulai mendownload toolchain buat dulu direktori toolchain
+#+BEGIN_SRC bash
+mkdir ~/toolchain
+cd ~/toolchain
+#+END_SRC
+** Download LLVM 
+   1. Download Semua LLVM
+      #+BEGIN_SRC bash
+      wget http://nemo.prasimax.net/snapdragon_sd_llvm_arm.lnx.3.9_installer_39200.2.tar
+      wget http://nemo.prasimax.net/snapdragon_sd_llvm_arm.lnx.4.0_installer_40200.108-19-21_05_04_55.zip
+      wget http://nemo.prasimax.net/snapdragon_sd_llvm_arm.lnx.4.0_installer_41100.108-19-21_05_08_09.zip
+      #+END_SRC
+      Buat direktori masing-masing versi
+      #+BEGIN_SRC bash
+      mkdir 3.9.2
+      mkdir 4.0.2
+      mkdir 4.0.11
+      #+END_SRC
+      Pindahkan masing-masing toolchaine kedalam direktori yang cocok 
+      #+BEGIN_SRC bash
+      mv snapdragon_sd_llvm_arm.lnx.3.9_installer_39200.2.tar 3.9.2
+      mv snapdragon_sd_llvm_arm.lnx.4.0_installer_40200.108-19-21_05_04_55.zip 4.0.2
+      mv snapdragon_sd_llvm_arm.lnx.4.0_installer_41100.108-19-21_05_08_09.zip 4.0.11
+      #+END_SRC
+  2. Extract masing masing llvm
+     + Extract 3.9.2
+       #+BEGIN_SRC bash
+       cd 3.9.2
+       tar -xvf snapdragon_sd_llvm_arm.lnx.3.9_installer_39200.2.tar
+       cd ..
+       #+END_SRC
+     + Extract 4.0.2
+       #+BEGIN_SRC bash
+       cd 4.0.2
+       cd ..
+       #+END_SRC
+     + Extract 4.0.11
+       #+BEGIN_SRC bash
+       cd 4.0.11
+       cd ..
+       #+END_SRC
 * Download Repo
   Download code dari repository prasimax.
   #+BEGIN_SRC bash

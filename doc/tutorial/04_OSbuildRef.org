@@ -31,7 +31,6 @@ Untuk itu dokumen ini sesuai dengan update pada  06-08-2021
        sudo apt-get install gcc-arm-linux-gnueabi
        sudo apt-get install gcc-multilib zlib1g:i386 libssl-dev clang llvm llvm-3.8
        #+END_SRC
-
   3. Install Java v1.8.0 JDK
      1. Menambahkan JDK Repository
         #+BEGIN_SRC bash
@@ -40,7 +39,7 @@ Untuk itu dokumen ini sesuai dengan update pada  06-08-2021
 	#+END_SRC
      2. Install Java v1.8.0 JDK dan verifikasi telah terinstall
 	#+BEGIN_SRC bash
-	sudo apt-get install openjdk-8-jrek
+	sudo apt-get install openjdk-8-jdk
 	java -version
 	#+END_SRC
 	Jika telah menginstall banyak java di lingkungan anda maka gunakan

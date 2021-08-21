@@ -116,18 +116,23 @@ cd ~/toolchain
        #+BEGIN_SRC bash
        cd 3.9.2
        tar -xvf snapdragon_sd_llvm_arm.lnx.3.9_installer_39200.2.tar
+       tar -xzvf Snapdragon-llvm-3.9.2-linux64.tar.gz 
        cd ..
        #+END_SRC
      + Extract 4.0.2
        #+BEGIN_SRC bash
        cd 4.0.2
        unzip snapdragon_sd_llvm_arm.lnx.4.0_installer_40200.108-19-21_05_04_55.zip
+       tar -xvf Snapdragon_SD_LLVM_ARM_LNX_4_0_Installer_40200_1.tar
+       tar -zxvf Snapdragon-llvm-4.0.2-linux64.tar.gz
        cd ..
        #+END_SRC
      + Extract 4.0.11
        #+BEGIN_SRC bash
        cd 4.0.11
-       unzip snapdragon_sd_llvm_arm.lnx.4.0_installer_41100.108-19-21_05_08_09.zip
+       unzip snapdragon_sd_llvm_arm.lnx.4.0_installer_41100.108-19-21_05_08_09.zip 
+       tar -xvf Snapdragon_SD_LLVM_ARM_LNX_4_0_Installer_41100_1.tar 
+       tar -zxvf Snapdragon-llvm-4.0.11-linux64.tar.gz 
        cd ..
        #+END_SRC
   3. Buat direktory
@@ -137,11 +142,12 @@ cd ~/toolchain
      #+END_SRC
      Pindahkan semua yang sudah terekstrak ke dalam direktori diatas
      #+BEGIN_SRC bash
+     cd ~/toolchain
      sudo mv 3.9.2 /pkg/qct/software/llvm/release/arm/
      sudo mv 4.0.2 /pkg/qct/software/llvm/release/arm/
      sudo mv 4.0.11 /pkg/qct/software/llvm/release/arm/
      #+END_SRC
-
+     
      Pastikan semua direktori terpindah
      #+BEGIN_SRC bash
      cd /pkg/qct/software/llvm/release/arm
@@ -158,5 +164,6 @@ cd ~/toolchain
 * Download Repo
   Download code dari repository prasimax.
   #+BEGIN_SRC bash
+  cd ~
   git clone https://git.prasimax.net:2443/innovation-center/chipcode_root.git chipcode_root
   #+END_SRC

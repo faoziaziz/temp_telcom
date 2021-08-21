@@ -197,3 +197,25 @@ cd ~/toolchain
   cd ~
   git clone https://git.prasimax.net:2443/innovation-center/chipcode_root.git chipcode_root
   #+END_SRC
+* Memulai Build
+  Membuat direktory workspace
+  #+BEGIN_SRC bash
+  mkdir QCS403_WS
+  cd QCS403_WS
+  #+END_SRC
+  Copy common
+  #+BEGIN_SRC
+  cp ../chipcode_root/QCS405.LE.1.0.1/contents.xml ./contents.xml
+  cp -Rf ../chipcode_root/QCS405.LE.1.0.1/common/ common/
+  cp -Rf ../chipcode_root/LE.UM.2.4.1/apps_proc/ apps_proc/
+  cp -Rf ../chipcode_root/ADSP.IT.1.0/adsp_proc/ adsp_proc/
+  #+END_SRC
+  Membuat symbol link lainnya
+  #+BEGIN_SRC bash
+  ln -s ../chipcode_root/BTFM.CHE.2.1.4/btfm_proc
+  ln -s ../chipcode_root/BOOT.XF.0.1/boot_images
+  ln -s ../chipcode_root/CDSP.HT.1.0/cdsp_proc
+  ln -s ../chipcode_root/RPM.BF.1.9/rpm_proc
+  ln -s ../chipcode_root/TZ.XF.5.1.2/trustzone_images
+  ln -s ../chipcode_root/WLAN.HL.3.1/wlan_proc
+  #+END_SRC

@@ -173,6 +173,11 @@ cd ~/toolchain
   #+END_SRC
 * Install GCC toolchain
   #+BEGIN_SRC bash
+  cd ~/toolchain
+  wget https://releases.linaro.org/archive/14.02/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabihf-4.8-2014.02_linux.tar.bz2
+  wget https://releases.linaro.org/archive/14.07/components/toolchain/binaries/gcc-linaro-aarch64-none-elf-4.9-2014.07_linux.tar.bz2
+  tar -xvjf gcc-linaro-arm-linux-gnueabihf-4.8-2014.02_linux.tar.bz2
+  tar -xvjf gcc-linaro-aarch64-none-elf-4.9-2014.07_linux.tar.bz2
   #+END_SRC 
 * Download Repo
   Download code dari repository prasimax.

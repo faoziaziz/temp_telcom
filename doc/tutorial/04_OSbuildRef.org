@@ -179,6 +179,18 @@ cd ~/toolchain
   tar -xvjf gcc-linaro-arm-linux-gnueabihf-4.8-2014.02_linux.tar.bz2
   tar -xvjf gcc-linaro-aarch64-none-elf-4.9-2014.07_linux.tar.bz2
   #+END_SRC 
+  Buat direktory untuk setiap toolchain.
+  #+BEGIN_SRC bash
+  sudo mkdir -p /prj/llvm-arm/home/common/build_tools
+  sudo chmod 755 /prj/llvm-arm/home/common/build_tools
+  sudo mkdir -p /pkg/qct/software/arm/linaro-toolchain/aarch64-none-elf
+  sudo chmod 755 /pkg/qct/software/arm/linaro-toolchain/aarch64-none-elf
+  #+END_SRC
+  Pindahkan semua toolchain kedalam direktori tersebut
+  #+BEGIN_SRC bash
+  sudo mv gcc-linaro-arm-linux-gnueabihf-4.8-2014.02_linux /prj/llvm-arm/home/common/build_tools/
+  sudo mv gcc-linaro-aarch64-none-elf-4.9-2014.07_linux /pkg/qct/software/arm/linaro-toolchain/aarch64-none-elf/4.9-2014.07
+  #+END_SRC
 * Download Repo
   Download code dari repository prasimax.
   #+BEGIN_SRC bash

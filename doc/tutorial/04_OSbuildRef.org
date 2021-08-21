@@ -159,8 +159,21 @@ cd ~/toolchain
   mkdir ~/hexagon
   cd ~/hexagon
   wget http://nemo.prasimax.net/hexagon.lnx.8.2_installer_08202.308-19-21_05_09_40.zip
+  unzip hexagon.lnx.8.2_installer_08202.308-19-21_05_09_40.zip 
+  tar -xvf Hexagon_LNX_8_2_Installer_08202_3.tar 
+  chmod +x Hexagon.LLVM_linux_installer_8.2.02.bin 
+  ./Hexagon.LLVM_linux_installer_8.2.02.bin
   #+END_SRC
-  
+  Setelah itu tinggal tekan tombol next, next dst tanpa settingan lainnya.
+  #+BEGIN_SRC bash
+  export HEXAGON_ROOT=~/Qualcomm/HEXAGON_Tools
+  export HEXAGON_RTOS_RELEASE=8.2.02
+  export HEXAGON_Q6VERSION=v66
+  export HEXAGON_IMAGE_ENTRY=0x8AC00000
+  #+END_SRC
+* Install GCC toolchain
+  #+BEGIN_SRC bash
+  #+END_SRC 
 * Download Repo
   Download code dari repository prasimax.
   #+BEGIN_SRC bash

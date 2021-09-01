@@ -1,0 +1,4 @@
+#+TITLE: PULSE AUDIO dan ALSA
+
+* Soal
+Buatlah sebuah program untuk merekam dengan menggunakan alsa atau pulse audio.

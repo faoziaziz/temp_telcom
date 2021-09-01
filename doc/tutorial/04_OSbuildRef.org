@@ -219,3 +219,5 @@ cd ~/toolchain
   ln -s ../chipcode_root/TZ.XF.5.1.2/trustzone_images
   ln -s ../chipcode_root/WLAN.HL.3.1/wlan_proc
   #+END_SRC
+
+

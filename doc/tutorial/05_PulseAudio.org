@@ -247,3 +247,7 @@ Compilasi
 #+BEGIN_SRC bash
 gcc parec.c -o parec -lpulse -lpulse-simple 
 #+END_SRC
+
+
+* Referensi
+1. [[https://freedesktop.org/software/pulseaudio/doxygen/][Dokumentasi PulseAudio]]

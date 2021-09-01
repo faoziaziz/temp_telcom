@@ -1,0 +1,5 @@
+#+TITLE: Hai semua
+
+
+* Abstract
+Ini merupakan dokument kumpulan development smart speaker

@@ -127,3 +127,10 @@ Untuk kompilasi gunakan perintah berikut ini.
 #+BEGIN_SRC bash
 gcc test.c -o mantap -lpulse -lpulse-simple
 #+END_SRC
+Dowload file wav berikut.
+[[https://git.prasimax.net:2443/azizfaozi/priv_test/-/raw/master/pulseaudio/mantap.wav?inline=false][File WAv]]
+simpan pada direktori yang sama dengan program yang dicompile
+play dengan perintah 
+#+BEGIN_SRC bash
+./mantap mantap.wav
+#+END_SRC

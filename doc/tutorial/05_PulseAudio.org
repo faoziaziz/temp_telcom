@@ -1,6 +1,10 @@
 #+TITLE: Pulse Audio
+* Simple Play
+Pulse audio dan alsa dibutuhkan untuk melakukan akses audio pada perangkat
+linux. Kita coba dengan membuat sebuah program sederhana untuk mengakses 
+audio dari file wav.
 
-* Contoh Code
+** Play Audio
 
 #+BEGIN_SRC C
 /***

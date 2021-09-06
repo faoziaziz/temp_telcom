@@ -1,0 +1,17 @@
+#+TITLE: Yocto Bitbake
+
+* Notes 
+Ini saya build dengan menggunakan ubuntu 16.04.2
+
+* Install Dependency
+Untuk memulai development dengan menggunakan yocto silahkan install berikut
+#+BEGIN_SRC bash
+sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+     build-essential chrpath socat libsdl1.2-dev xterm
+#+END_SRC
+
+* Referensi
+1. https://variwiki.com/index.php?title=Yocto_Hello_World
+2. https://variwiki.com/index.php?title=Yocto_Toolchain_installation&release=RELEASE_MORTY_V1.0_DART-6UL
+3. https://variwiki.com/index.php?title=Yocto_Build_Release&release=RELEASE_MORTY_V1.0_DART-6UL
+4. [[https://www.yoctoproject.org/docs/2.0/yocto-project-qs/yocto-project-qs.html][Sample Yocto]]

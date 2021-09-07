@@ -9,6 +9,7 @@ Untuk itu dokumen ini sesuai dengan update pada  06-08-2021
      Peringatan: 
      + Donwload yang AMD64.
      + Download yang 16.04.x (versi 16.04.7 tidak masalah)
+       Kalian juga bisa download di [[https://git.prasimax.net][Prasimax]]
   2. Install development package
      + Update linux system 
        #+BEGIN_SRC bash
@@ -95,9 +96,9 @@ cd ~/toolchain
 ** Download LLVM 
    1. Download Semua LLVM
       #+BEGIN_SRC bash
-      wget http://nemo.prasimax.net/snapdragon_sd_llvm_arm.lnx.3.9_installer_39200.2.tar
-      wget http://nemo.prasimax.net/snapdragon_sd_llvm_arm.lnx.4.0_installer_40200.108-19-21_05_04_55.zip
-      wget http://nemo.prasimax.net/snapdragon_sd_llvm_arm.lnx.4.0_installer_41100.108-19-21_05_08_09.zip
+      wget https://git.prasimax.net/snapdragon_sd_llvm_arm.lnx.3.9_installer_39200.2.tar
+      wget https://git.prasimax.net/snapdragon_sd_llvm_arm.lnx.4.0_installer_40200.108-19-21_05_04_55.zip
+      wget https://git.prasimax.net/snapdragon_sd_llvm_arm.lnx.4.0_installer_41100.108-19-21_05_08_09.zip
       #+END_SRC
       Buat direktori masing-masing versi
       #+BEGIN_SRC bash
@@ -219,5 +220,9 @@ cd ~/toolchain
   ln -s ../chipcode_root/TZ.XF.5.1.2/trustzone_images
   ln -s ../chipcode_root/WLAN.HL.3.1/wlan_proc
   #+END_SRC
-
-
+* Init build
+  #+BEGIN_SRC bash
+  cd ~/QCS403_WS/apps_proc/poky
+  oe-init-build-env
+  list-build-commands
+  #+END_SRC 

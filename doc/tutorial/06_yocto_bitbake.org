@@ -10,6 +10,12 @@ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
      build-essential chrpath socat libsdl1.2-dev xterm
 #+END_SRC
 
+* Eksekusi
+Download source
+#+BEGIN_SRC bash
+git clone git://git.yoctoproject.org/poky
+git checkout jethro
+#+END_SRC
 * Referensi
 1. https://variwiki.com/index.php?title=Yocto_Hello_World
 2. https://variwiki.com/index.php?title=Yocto_Toolchain_installation&release=RELEASE_MORTY_V1.0_DART-6UL

@@ -219,5 +219,9 @@ cd ~/toolchain
   ln -s ../chipcode_root/TZ.XF.5.1.2/trustzone_images
   ln -s ../chipcode_root/WLAN.HL.3.1/wlan_proc
   #+END_SRC
-
-
+* Init build
+  #+BEGIN_SRC bash
+  cd ~/QCS403_WS/apps_proc/poky
+  oe-init-build-env
+  list-build-commands
+  #+END_SRC 

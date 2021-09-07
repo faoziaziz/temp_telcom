@@ -20,6 +20,11 @@ Buat branch milikmu sendiri
 cd ~/poky
 git checkout -b jethro origin/jethro
 #+END_SRC
+
+* Inisiasi Build
+#+BEGIN_SRC bash
+source oe-init-build-env
+#+END_SRC
 * Referensi
 1. https://variwiki.com/index.php?title=Yocto_Hello_World
 2. https://variwiki.com/index.php?title=Yocto_Toolchain_installation&release=RELEASE_MORTY_V1.0_DART-6UL

@@ -14,7 +14,11 @@ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 Download source
 #+BEGIN_SRC bash
 git clone git://git.yoctoproject.org/poky
-git checkout jethro
+#+END_SRC
+Buat branch milikmu sendiri
+#+BEGIN_SRC bash
+cd ~/poky
+git checkout -b jethro origin/jethro
 #+END_SRC
 * Referensi
 1. https://variwiki.com/index.php?title=Yocto_Hello_World

@@ -1,0 +1,27 @@
+#+TITLE: Nambah Service
+
+* Nabah service di smart speaker
+** Masuk dengan adb
+#+BEGIN_SRC bash
+adb shell 
+#+END_SRC
+** Buat File pada directory
+#+BEGIN_SRC bash
+/etc/systemd/system
+#+END_SRC
+buat service dengan nama file .service
+#+BEGIN_SRC bash 
+vim /etc/systemd/system/mantap.service
+#+END_SRC
+contoh contentnya seperti berikut
+#+BEGIN_SRC bash
+[Unit]
+Description=Contoh service mantanmon.
+
+[Service]
+ExecStart=/data/mantanmon
+#+END_SRC
+Jalankan
+#+BEGIN_SRC bash 
+sudo systemctl enable mantap
+#+END_SRC

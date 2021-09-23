@@ -23,5 +23,5 @@ ExecStart=/data/mantanmon
 #+END_SRC
 Jalankan
 #+BEGIN_SRC bash 
-sudo systemctl enable mantap
+systemctl enable mantap
 #+END_SRC

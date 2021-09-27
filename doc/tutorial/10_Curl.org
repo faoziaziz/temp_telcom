@@ -98,7 +98,7 @@ adb push singkong /data
 cd data 
 chmod +x singkong 
 ./singkong
-#+end
+#+end_src
 
 * Setting wifi SmartSpeaker
 edit file smart speaker 

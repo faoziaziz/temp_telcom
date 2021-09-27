@@ -135,6 +135,6 @@ terus check program tadi
 cd data 
 chmod +x singkong 
 ./singkong
-#+end
+#+end_src
 
   

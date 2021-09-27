@@ -50,6 +50,7 @@ make install
 ** Example Code
 pertama masuk ke direktory src untuk membuat sebuah code 
 #+begin_src bash
+mkdir ~/src
 cd ~/src  
 #+end_src
 buat sebuah file bernama singkong.c dengan isinya sebagai berikut 
@@ -136,5 +137,4 @@ chmod +x singkong
 ./singkong
 #+end
 
-* Reference
   
